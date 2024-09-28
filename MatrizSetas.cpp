@@ -90,7 +90,7 @@ void MatrizSetas::processarConjunto(const std::vector<std::string>& linhas) {
         for (int i = 0; i < linhas_conjunto; ++i) {
             std::vector<Seta*> linha;
             for (int j = 0; j < 4; ++j) {
-                linha.push_back(new Seta(static_cast<int>(linhas[i][j]), j));
+                linha.push_back(new Seta((linhas[i][j]), j));
             }
             matriz.push_back(linha);
 
@@ -107,7 +107,7 @@ void MatrizSetas::processarConjunto(const std::vector<std::string>& linhas) {
         for (int i = 0; i < linhas_conjunto; ++i) {
             std::vector<Seta*> linha;
             for (int j = 0; j < 4; ++j) {
-                linha.push_back(new Seta(static_cast<int>(linhas[i][j]), j));
+                linha.push_back(new Seta((linhas[i][j]), j));
             }
             matriz.push_back(linha);
 
@@ -122,7 +122,7 @@ void MatrizSetas::processarConjunto(const std::vector<std::string>& linhas) {
         for (int i = 0; i < linhas_conjunto; ++i) {
             std::vector<Seta*> linha;
             for (int j = 0; j < 4; ++j) {
-                linha.push_back(new Seta(static_cast<int>(linhas[i][j]), j));
+                linha.push_back(new Seta((linhas[i][j]), j));
             }
             matriz.push_back(linha);
         }

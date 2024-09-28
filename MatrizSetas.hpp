@@ -16,7 +16,7 @@ public:
     // Destrutor
     ~MatrizSetas();
 
-    // Função para obter a matriz de setas
+    // Função para obter uma seta
     Seta* getSeta(int linha, int coluna);
 
     int getNumLinhas() const;

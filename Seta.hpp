@@ -9,7 +9,13 @@ class Seta: public ObjetoDeJogo {
 public:        
     Seta(const ObjetoDeJogo &obj, char a, int p) : ObjetoDeJogo(obj), ativa(a == '1'), posicao(p) {}
 
-    Seta(int a, int p): ObjetoDeJogo("seta", pegaSprite(p), 40, getPosicaoInicial(p)), ativa(a == 1), posicao(p) {}
+    Seta(char a, int p): ObjetoDeJogo("seta", pegaSprite(p), 99, getPosicaoInicial(p)), ativa(a == '1'), posicao(p) {
+        if(a=='1')
+            this->ativarObj();
+        else
+            this->desativarObj();
+        
+    }
     virtual ~Seta() {}
     void ativarSeta() {ativa = true;}
     void desativarSeta() {ativa = false;}
@@ -36,13 +42,13 @@ private:
     int getPosicaoInicial(int i){
         switch (i){
         case 0:
-            return 0;
+            return 4;
         case 1:
-            return 20;
+            return 28;
         case 2:
-            return 40;
+            return 52;
         case 3:
-            return 60;
+            return 76;
         default:
             return 0;
         }
